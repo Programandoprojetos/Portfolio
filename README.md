@@ -43,7 +43,7 @@ Sou um desenvolvedor focado na criação de interfaces modernas, funcionais e re
 Quer bater um papo ou propor uma colaboração?  
 Entre em contato pelo formulário no site ou envie um email para:
 
-📧 seuemail@email.com
+📧 projetodeprogramacao3489@gmail.com
 
 
 ---
