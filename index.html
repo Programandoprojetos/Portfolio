@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <meta name="description" content="Portfólio profissional com projetos, habilidades, cursos e contato. Desenvolvedor web especializado em HTML, CSS, JavaScript e React.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Meu Portfólio | Desenvolvedor Web">
+    <meta property="og:description" content="Confira meus projetos e habilidades em desenvolvimento web.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect e Preload para melhorar desempenho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Awesome (carregado com defer para não bloquear) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Botão de tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="highlight">DEV</span>Portfolio
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" aria-label="Início" class="active">Início</a></li>
+                <li><a href="#about" aria-label="Sobre mim">Sobre</a></li>
+                <li><a href="#skills" aria-label="Habilidades">Habilidades</a></li>
+                <li><a href="#experience" aria-label="Experiência">Experiência</a></li>
+                <li><a href="#projects" aria-label="Projetos">Projetos</a></li>
+                <li><a href="#courses" aria-label="Cursos">Cursos</a></li>
+                <li><a href="#contact" aria-label="Contato">Contato</a></li>
+            </ul>
+            
+            <div class="mobile-menu-btn" aria-label="Menu mobile" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/programandoprojetos" target="_blank" aria-label="GitHub" class="icon-tooltip" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/programando_projetos/" target="_blank" aria-label="Instagram" class="icon-tooltip" data-tooltip="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" aria-label="LinkedIn" class="icon-tooltip" data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/5564981252213" target="_blank" aria-label="WhatsApp" class="icon-tooltip" data-tooltip="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="content fade-in">
+            <h1>Olá, eu sou <span class="highlight">Desenvolvendo Projetos</span></h1>
+            <div class="typing-container">
+                <p id="typed-text"></p>
+                <div class="cursor"></div>
+            </div>
+            <p class="subheading">Transformando ideias em realidade digital através de código e design</p>
+            <div class="hero-buttons">
+                <button onclick="document.getElementById('projects').scrollIntoView()" class="primary-btn">
+                    <i class="fas fa-laptop-code"></i> Ver Projetos
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="secondary-btn">
+                    <i class="fas fa-envelope"></i> Contato
+                </button>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            <span class="sr-only">Rolar para baixo</span>
+        </a>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Sobre Mim</h2>
+                <p>Conheça um pouco da minha história e paixão pelo desenvolvimento</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Quem sou eu</h3>
+                    <p>Olá! Sou um desenvolvedor web apaixonado por criar soluções digitais que combinam funcionalidade e estética. Minha jornada no mundo da programação começou há alguns anos, quando descobri a incrível possibilidade de transformar linhas de código em experiências interativas.</p>
+                    
+                    <p>Atualmente, estou focado em desenvolvimento front-end, criando interfaces responsivas e intuitivas. Também estou aprendendo constantemente novas tecnologias para expandir meu conjunto de habilidades.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Educação</h4>
+                                <p>Estudante de Gestão da TI</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Brasil</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>
+                                <h4>Interesses</h4>
+                                <p>Desenvolvimento Web, UI/UX, Mobile</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h4>Idiomas</h4>
+                                <p>Português (Nativo), Inglês (Intermediário)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="download-cv">
+                        <i class="fas fa-download"></i> Baixar Currículo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Minhas Habilidades</h2>
+                <p>Confira as minhas principais habilidades e tecnologias</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Criação de sites responsivos e estruturados com HTML5.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <span>90%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Estilização avançada de interfaces com CSS3.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de funcionalidades interativas com JavaScript.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="React">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <p>Construção de interfaces interativas e dinâmicas com React.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                        <span>75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Minha Experiência</h2>
+                <p>Trajetória profissional e acadêmica</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> 2022 - Atual
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Desenvolvedor Web</h3>
+                        <span class="company">Empresa XYZ</span>
+                        <p>Desenvolvimento de aplicações web usando React, Node.js e MongoDB. Responsável por implementar interfaces de usuário responsivas e otimizar o desempenho do front-end.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> 2020 - 2022
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Estágio em Desenvolvimento</h3>
+                        <span class="company">Empresa ABC</span>
+                        <p>Suporte no desenvolvimento front-end utilizando HTML, CSS e JavaScript. Participação em projetos de e-commerce e websites institucionais.</p>
+                        <div class="timeline-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> 2018 - 2022
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Graduação em Sistemas de Informação</h3>
+                        <span class="company">Universidade XYZ</span>
+                        <p>Foco em desenvolvimento de software e gestão de TI. Participação em projetos acadêmicos e hackathons.</p>
+                        <div class="timeline-tags">
+                            <span>Sistemas de Informação</span>
+                            <span>Gestão de TI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Meus Projetos</h2>
+                <p>Confira alguns dos meus trabalhos recentes</p>
+            </div>
+            
+            <div class="project-filter fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-category="web">
+                    <div class="image-placeholder" data-src="placeholder.jpg" loading="lazy">
+                        <i class="fas fa-code"></i>
+                        <span>Projeto 1</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Responsivo</h3>
+                        <p>Sistema web completo com diversas funcionalidades para loja online.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto1">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://seulink.com/projeto1" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Visitar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-category="app">
+                    <div class="image-placeholder" data-src="placeholder.jpg" loading="lazy">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Projeto 2</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Aplicativo de Finanças</h3>
+                        <p>Aplicação web moderna com React e Firebase para controle financeiro.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto2">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://seulink.com/projeto2" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Visitar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-category="design">
+                    <div class="image-placeholder" data-src="placeholder.jpg" loading="lazy">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Projeto 3</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Landing Page Moderna</h3>
+                        <p>Página de destino para empresa de tecnologia com animações e UI/UX moderna.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto3">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://seulink.com/projeto3" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Visitar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Cursos Recomendados</h2>
+                <p>Adquira novos conhecimentos com esses cursos</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card fade-in">
+                    <div class="image-placeholder" data-src="course1.jpg" loading="lazy">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Curso 1</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Iniciante</div>
+                        <h3>Desenvolvimento Web Completo</h3>
+                        <p>Aprenda HTML, CSS e JavaScript do zero ao avançado. Curso completo para iniciantes.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 40 horas</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <a href="https://linkdocurso1.com" target="_blank" rel="noopener noreferrer" class="course-btn">
+                            Acessar Curso
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-card fade-in">
+                    <div class="image-placeholder" data-src="course2.jpg" loading="lazy">
+                        <i class="fab fa-react"></i>
+                        <span>Curso 2</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Intermediário</div>
+                        <h3>React do Zero ao Profissional</h3>
+                        <p>Desenvolva aplicações modernas com React, Hooks, Context API e Redux.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 35 horas</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <a href="https://linkdocurso2.com" target="_blank" rel="noopener noreferrer" class="course-btn">
+                            Acessar Curso
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="course-card fade-in">
+                    <div class="image-placeholder" data-src="course3.jpg" loading="lazy">
+                        <i class="fas fa-server"></i>
+                        <span>Curso 3</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Avançado</div>
+                        <h3>Node.js e MongoDB</h3>
+                        <p>Crie APIs RESTful e aplicações back-end completas com Node.js e MongoDB.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-clock"></i> 30 horas</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                        <a href="https://linkdocurso3.com" target="_blank" rel="noopener noreferrer" class="course-btn">
+                            Acessar Curso
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Vamos conversar sobre o seu próximo projeto</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>seuemail@dominio.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefone</h3>
+                        <p>+55 (64) 98125-2213</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localização</h3>
+                        <p>Brasil</p>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/programandoprojetos" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/programando_projetos/" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://wa.me/5564981252213" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="fade-in">
+                    <div class="form-header">
+                        <h3>Envie uma mensagem</h3>
+                        <p>Preencha o formulário abaixo e entrarei em contato o mais rápido possível</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Seu Nome</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Seu E-mail</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <div class="input-group">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" id="subject" name="subject" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <div class="input-group textarea">
+                            <i class="fas fa-comment"></i>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">
+                        <span class="highlight">DEV</span>Portfolio
+                    </a>
+                    <p>Transformando ideias em realidade digital</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/programandoprojetos" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/programando_projetos/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/5564981252213" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Programando Projetos. Todos os direitos reservados.</p>
+                <p class="footer-credits">Feito com <i class="fas fa-heart"></i> e <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+        
+        <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
+    <!-- Modais de Projeto -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalhes do Projeto</h3>
+                <button class="close-modal" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Conteúdo do projeto será inserido aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Carregando scripts -->
+    <!-- Particles.js carregado de forma assíncrona -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" async></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
