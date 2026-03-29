@@ -291,8 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
             challenges: 'O foco foi criar uma página atrativa, com cara de produto real, organizando informações visuais sem poluir a experiência do usuário.',
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
             gallery: ['Hero com destaque visual', 'Cards de conteúdo bem organizados', 'Estrutura pensada para navegação fluida'],
-            liveLink: 'https://github.com/Programandoprojetos/Projeto_FilmesFlix',
-            repoLink: 'https://github.com/Programandoprojetos/Projeto_FilmesFlix'
+            liveLink: 'https://programandoprojetos.github.io/FilmesFlix/',
+            repoLink: 'https://github.com/Programandoprojetos/FilmesFlix'
         },
         projeto3: {
             title: 'Portfólio Programando Projetos',
