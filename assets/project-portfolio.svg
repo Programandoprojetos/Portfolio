@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090f"/>
+      <stop offset="100%" stop-color="#21263e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="104" y="90" width="592" height="320" rx="24" fill="#0f1220" stroke="#39406b"/>
+  <rect x="130" y="124" width="540" height="42" rx="21" fill="#151a2f"/>
+  <circle cx="160" cy="145" r="8" fill="#ff6b7a"/>
+  <circle cx="188" cy="145" r="8" fill="#ffd166"/>
+  <circle cx="216" cy="145" r="8" fill="#06d6a0"/>
+  <rect x="146" y="206" width="244" height="148" rx="18" fill="#5646ff" opacity="0.88"/>
+  <rect x="418" y="208" width="216" height="22" rx="11" fill="#d2d6f3"/>
+  <rect x="418" y="252" width="190" height="18" rx="9" fill="#d2d6f3" opacity="0.75"/>
+  <rect x="418" y="288" width="160" height="18" rx="9" fill="#d2d6f3" opacity="0.55"/>
+  <text x="104" y="450" fill="#ffffff" font-size="46" font-family="Inter, Arial, sans-serif" font-weight="700">Portfólio Programando Projetos</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c0508"/>
+      <stop offset="100%" stop-color="#371219"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="78" y="112" width="644" height="270" rx="24" fill="#12080a" stroke="#6a1a24"/>
+  <rect x="112" y="150" width="216" height="194" rx="18" fill="#cf3148"/>
+  <rect x="356" y="154" width="320" height="26" rx="13" fill="#f2b4bd" opacity="0.9"/>
+  <rect x="356" y="206" width="256" height="20" rx="10" fill="#f2b4bd" opacity="0.75"/>
+  <rect x="356" y="246" width="298" height="20" rx="10" fill="#f2b4bd" opacity="0.55"/>
+  <rect x="356" y="300" width="146" height="38" rx="19" fill="#ffffff"/>
+  <text x="112" y="432" fill="#ffffff" font-size="46" font-family="Inter, Arial, sans-serif" font-weight="700">FilmesFlix</text>
+  <text x="112" y="468" fill="#f4c3ca" font-size="24" font-family="Inter, Arial, sans-serif">Layout inspirado em streaming com apelo visual moderno</text>
+</svg>

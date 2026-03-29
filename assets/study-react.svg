@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0f1726"/>
+  <g fill="none" stroke="#61dafb" stroke-width="10">
+    <ellipse cx="400" cy="250" rx="170" ry="64"/>
+    <ellipse cx="400" cy="250" rx="170" ry="64" transform="rotate(60 400 250)"/>
+    <ellipse cx="400" cy="250" rx="170" ry="64" transform="rotate(120 400 250)"/>
+  </g>
+  <circle cx="400" cy="250" r="26" fill="#61dafb"/>
+  <text x="284" y="432" fill="#ffffff" font-size="48" font-family="Inter, Arial, sans-serif" font-weight="700">React Studies</text>
+</svg>

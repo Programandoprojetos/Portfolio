@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#18110f"/>
+      <stop offset="100%" stop-color="#34231f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="120" y="108" width="560" height="284" rx="26" fill="#fff4ec"/>
+  <rect x="160" y="148" width="180" height="180" rx="18" fill="#ffb36b"/>
+  <rect x="378" y="154" width="230" height="20" rx="10" fill="#56362c"/>
+  <rect x="378" y="204" width="180" height="18" rx="9" fill="#7a5d53"/>
+  <rect x="378" y="240" width="204" height="18" rx="9" fill="#7a5d53"/>
+  <rect x="378" y="286" width="126" height="36" rx="18" fill="#5646ff"/>
+  <text x="250" y="442" fill="#ffffff" font-size="48" font-family="Inter, Arial, sans-serif" font-weight="700">UI / UX Focus</text>
+</svg>

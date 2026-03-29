@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#09111f"/>
+      <stop offset="100%" stop-color="#152b44"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="650" cy="100" r="90" fill="#5646ff" opacity="0.18"/>
+  <path d="M400 120l120 40v95c0 86-54 139-120 175-66-36-120-89-120-175v-95z" fill="none" stroke="#8ea2ff" stroke-width="14"/>
+  <path d="M400 184l55 17v45c0 41-24 71-55 91-31-20-55-50-55-91v-45z" fill="#5646ff" opacity="0.88"/>
+  <text x="70" y="420" fill="#ffffff" font-size="46" font-family="Inter, Arial, sans-serif" font-weight="700">CyberSentinel</text>
+  <text x="70" y="460" fill="#c7d5e8" font-size="24" font-family="Inter, Arial, sans-serif">Visual forte para tecnologia e segurança digital</text>
+</svg>

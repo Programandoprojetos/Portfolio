@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programando Projetos | Portfólio</title>
+    <meta name="description" content="Portfólio de Programando Projetos com projetos autorais, habilidades em front-end e formas de contato para freelas, parcerias e oportunidades.">
+    <meta name="author" content="Programando Projetos">
+    <link rel="canonical" href="https://programandoprojetos.github.io/Portfolio/">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <meta property="og:title" content="Programando Projetos | Portfólio">
+    <meta property="og:description" content="Projetos, tecnologias e contatos de Programando Projetos em uma landing page moderna e responsiva.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://programandoprojetos.github.io/Portfolio/">
+    <meta property="og:image" content="https://programandoprojetos.github.io/Portfolio/assets/og-image.svg">
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Programando Projetos | Portfólio">
+    <meta name="twitter:description" content="Conheça meus projetos, minha stack e fale comigo para novas oportunidades.">
+    <meta name="twitter:image" content="https://programandoprojetos.github.io/Portfolio/assets/og-image.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro e escuro">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="highlight">DEV</span>Portfolio
+                </a>
+            </div>
+
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#home" aria-label="Início" class="active">Início</a></li>
+                <li><a href="#about" aria-label="Sobre mim">Sobre</a></li>
+                <li><a href="#skills" aria-label="Habilidades">Habilidades</a></li>
+                <li><a href="#experience" aria-label="Experiência">Experiência</a></li>
+                <li><a href="#services" aria-label="Serviços">Serviços</a></li>
+                <li><a href="#projects" aria-label="Projetos">Projetos</a></li>
+                <li><a href="#courses" aria-label="Formação e estudos">Estudos</a></li>
+                <li><a href="#contact" aria-label="Contato">Contato</a></li>
+            </ul>
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Abrir menu principal"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+            >
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="social-links">
+                <a href="https://github.com/programandoprojetos" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-tooltip" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/programando_projetos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="icon-tooltip" data-tooltip="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-tooltip" data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/5564981252213" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="icon-tooltip" data-tooltip="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="content fade-in">
+            <h1>Olá, eu sou <span class="highlight">Programando Projetos</span></h1>
+            <div class="typing-container">
+                <p id="typed-text"></p>
+                <div class="cursor"></div>
+            </div>
+            <p class="subheading">Crio landing pages, portfólios e interfaces modernas para marcas, projetos pessoais e presença digital.</p>
+            <p class="hero-intro">Meu foco é transformar ideias em páginas com visual forte, navegação clara e estrutura pronta para publicar.</p>
+            <div class="hero-buttons">
+                <button onclick="document.getElementById('projects').scrollIntoView()" class="primary-btn">
+                    <i class="fas fa-laptop-code"></i> Ver Projetos
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="secondary-btn">
+                    <i class="fas fa-envelope"></i> Contato
+                </button>
+                <a href="https://wa.me/5564981252213" target="_blank" rel="noopener noreferrer" class="secondary-btn hero-link-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            <span class="sr-only">Rolar para baixo</span>
+        </a>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Sobre Mim</h2>
+                <p>Conheça um pouco da minha trajetória e da minha paixão por desenvolvimento.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="image-placeholder image-cover about-cover">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Quem sou eu</h3>
+                    <p>Sou um desenvolvedor web apaixonado por criar soluções digitais que unem clareza visual, usabilidade e performance. Gosto de transformar ideias em páginas modernas, responsivas e com identidade própria.</p>
+
+                    <p>Hoje meu foco está em front-end com HTML, CSS, JavaScript e React, sempre evoluindo em boas práticas, acessibilidade e experiência do usuário.</p>
+
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Educação</h4>
+                                <p>Estudante de Gestão da TI</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Brasil</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>
+                                <h4>Interesses</h4>
+                                <p>Desenvolvimento Web, UI/UX e interfaces responsivas</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h4>Idiomas</h4>
+                                <p>Português (nativo) e Inglês (intermediário)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="mailto:projetodeprogramacao3489@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20curr%C3%ADculo" class="download-cv">
+                        <i class="fas fa-download"></i> Solicitar Currículo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Minhas Habilidades</h2>
+                <p>Tecnologias que uso para criar interfaces modernas, rápidas e responsivas.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Estrutura semântica para páginas bem organizadas, acessíveis e preparadas para SEO.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <span>90%</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Layouts fluidos, animações suaves e identidade visual consistente em diferentes telas.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Interatividade, filtros, animações e experiências que deixam a navegação mais viva.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="icon icon-tooltip" data-tooltip="React">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <p>Construção de interfaces componentizadas com foco em escalabilidade e experiência do usuário.</p>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                        <span>75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Minha Experiência</h2>
+                <p>Uma visão prática do tipo de projeto que construo e do valor que procuro entregar.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> Atualmente
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Projetos autorais para web</h3>
+                        <span class="company">Programando Projetos</span>
+                        <p>Criação de landing pages, páginas institucionais e portfólios com foco em apresentação forte, leitura rápida e adaptação para desktop e mobile.</p>
+                        <div class="timeline-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> Em evolução
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Evolução contínua em front-end</h3>
+                        <span class="company">Aprendizado contínuo</span>
+                        <p>Aprofundamento em React, componentes reutilizáveis, acessibilidade, performance e boas práticas para publicar projetos com mais qualidade.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>Acessibilidade</span>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i> Formação
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Gestão da Tecnologia da Informação</h3>
+                        <span class="company">Base acadêmica</span>
+                        <p>Fundamentos em tecnologia, organização de projetos, resolução de problemas e visão prática para transformar demandas em soluções digitais mais consistentes.</p>
+                        <div class="timeline-tags">
+                            <span>Gestão de TI</span>
+                            <span>Sistemas</span>
+                            <span>Organização</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>O que eu posso criar</h2>
+                <p>Serviços alinhados ao tipo de trabalho que melhor representa meu portfólio hoje.</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas para apresentar negócios, produtos, infoprodutos ou campanhas com design marcante e foco em conversão.</p>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Portfólios e páginas pessoais</h3>
+                    <p>Sites para profissionais que precisam mostrar trabalhos, contatos e presença digital com mais personalidade.</p>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-screen-button"></i>
+                    </div>
+                    <h3>Interfaces responsivas</h3>
+                    <p>Layouts pensados para funcionar bem no celular e no desktop, com navegação clara e aparência profissional.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Meus Projetos</h2>
+                <p>Projetos reais que representam minha evolução, estilo visual e prática com front-end.</p>
+            </div>
+
+            <div class="project-filter fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="security">Segurança</button>
+                <button class="filter-btn" data-filter="entertainment">Entretenimento</button>
+                <button class="filter-btn" data-filter="portfolio">Portfólio</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-category="security">
+                    <div class="image-placeholder image-cover" data-src="assets/project-cybersentinel.svg">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>CyberSentinel</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>CyberSentinel</h3>
+                        <p>Projeto com identidade visual forte e proposta voltada a tecnologia e segurança digital.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto1">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://github.com/Programandoprojetos/-CyberSentinel" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver Repositório
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="entertainment">
+                    <div class="image-placeholder image-cover" data-src="assets/project-filmesflix.svg">
+                        <i class="fas fa-film"></i>
+                        <span>FilmesFlix</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>FilmesFlix</h3>
+                        <p>Interface inspirada em streaming com destaque para organização visual e apelo moderno.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Landing Page</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto2">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://github.com/Programandoprojetos/Projeto_FilmesFlix" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver Repositório
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="portfolio">
+                    <div class="image-placeholder image-cover" data-src="assets/project-portfolio.svg">
+                        <i class="fas fa-window-maximize"></i>
+                        <span>Portfólio</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfólio Programando Projetos</h3>
+                        <p>Minha vitrine digital para apresentar trabalhos, stack, contatos e estilo de desenvolvimento.</p>
+                        <div class="project-tags">
+                            <span>Portfólio</span>
+                            <span>Responsivo</span>
+                            <span>GitHub Pages</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="view-project" data-project="projeto3">
+                                <i class="fas fa-eye"></i> Ver Detalhes
+                            </a>
+                            <a href="https://programandoprojetos.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Visitar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Formação e Estudos</h2>
+                <p>Áreas que estou desenvolvendo para fortalecer meus próximos projetos.</p>
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card fade-in">
+                    <div class="image-placeholder image-cover" data-src="assets/study-html-css-js.svg">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Front-end</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Base sólida</div>
+                        <h3>HTML, CSS e JavaScript</h3>
+                        <p>Evolução constante em semântica, responsividade, componentes visuais e interações para web.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-check"></i> Projetos publicados</span>
+                            <span><i class="fas fa-layer-group"></i> Interfaces responsivas</span>
+                        </div>
+                        <a href="#projects" class="course-btn">Ver projetos</a>
+                    </div>
+                </div>
+
+                <div class="course-card fade-in">
+                    <div class="image-placeholder image-cover" data-src="assets/study-react.svg">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Próximo passo</div>
+                        <h3>React e interfaces reutilizáveis</h3>
+                        <p>Estudo de componentes, organização de telas e construção de experiências mais dinâmicas.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-code-branch"></i> Componentização</span>
+                            <span><i class="fas fa-bolt"></i> Performance</span>
+                        </div>
+                        <a href="https://github.com/programandoprojetos" target="_blank" rel="noopener noreferrer" class="course-btn">Ver GitHub</a>
+                    </div>
+                </div>
+
+                <div class="course-card fade-in">
+                    <div class="image-placeholder image-cover" data-src="assets/study-uiux.svg">
+                        <i class="fas fa-pen-ruler"></i>
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-badge">Foco visual</div>
+                        <h3>Design, UX e apresentação</h3>
+                        <p>Busca por interfaces mais claras, atrativas e consistentes para melhorar a percepção do projeto final.</p>
+                        <div class="course-details">
+                            <span><i class="fas fa-eye"></i> Hierarquia visual</span>
+                            <span><i class="fas fa-mobile-screen"></i> Mobile first</span>
+                        </div>
+                        <a href="#contact" class="course-btn">Falar comigo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Se você quer tirar uma ideia do papel, vamos conversar.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>projetodeprogramacao3489@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefone</h3>
+                        <p>+55 (64) 98125-2213</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localização</h3>
+                        <p>Brasil</p>
+                    </div>
+
+                    <div class="social-contact">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/programandoprojetos" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/programando_projetos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://wa.me/5564981252213" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="fade-in">
+                    <div class="form-header">
+                        <h3>Envie uma mensagem</h3>
+                        <p>Preencha o formulário abaixo e eu abro seu e-mail com a mensagem pronta para envio.</p>
+                    </div>
+
+                    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+                    <div class="form-group">
+                        <label for="name">Seu Nome</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu E-mail</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <div class="input-group">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" id="subject" name="subject" required aria-required="true" value="Contato pelo portfólio">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <div class="input-group textarea">
+                            <i class="fas fa-comment"></i>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">
+                        <span class="highlight">Programando</span> Projetos
+                    </a>
+                    <p>Transformando ideias em presença digital com código e identidade visual.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/programandoprojetos" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/programando_projetos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/luis-henrique-895930141/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/5564981252213" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Programando Projetos. Todos os direitos reservados.</p>
+                <p class="footer-credits">Feito com <i class="fas fa-heart"></i> e <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+
+        <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
+    <div class="modal-overlay" id="projectModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalhes do Projeto</h3>
+                <button class="close-modal" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" async></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
