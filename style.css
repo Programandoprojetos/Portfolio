@@ -815,15 +815,47 @@ img {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 2rem;
+    padding: 0.5rem 0 1.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.25rem;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-card);
+}
+
+.projects-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: var(--bg-card);
+    border-radius: 999px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 999px;
+}
+
+.projects-grid.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+}
+
+.projects-grid.is-dragging .project-card {
+    user-select: none;
 }
 
 .project-card {
     background: var(--bg-card);
     border-radius: 10px;
     overflow: hidden;
+    flex: 0 0 min(360px, 86vw);
+    scroll-snap-align: start;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px var(--card-shadow);
 }
@@ -899,6 +931,7 @@ img {
 
 .project-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -928,6 +961,18 @@ img {
     background: var(--accent-color);
     color: white;
     transform: translateY(-3px);
+}
+
+.project-repo-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 /* ===== CURSOS ===== */
@@ -1048,6 +1093,15 @@ img {
 
 .contact-card p {
     color: var(--text-secondary);
+}
+
+.contact-card a {
+    color: inherit;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--accent-color);
 }
 
 .social-contact {
@@ -1198,6 +1252,27 @@ input:focus, textarea:focus {
     width: 100%;
     justify-content: center;
     padding: 1rem;
+}
+
+.whatsapp-form-btn {
+    width: 100%;
+    margin-top: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #25d366;
+    color: #25d366;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.whatsapp-form-btn:hover {
+    background: #25d366;
+    color: #07150c;
+    transform: translateY(-3px);
 }
 
 /* ===== FOOTER ===== */

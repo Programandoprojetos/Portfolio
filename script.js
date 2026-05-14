@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const texts = [
-        'Desenvolvedor web focado em interfaces modernas',
-        'Construindo projetos para publicar e evoluir',
-        'Sempre estudando front-end, UX e performance'
+        'Desenvolvedor web em evolução',
+        'Criando landing pages e portfólios responsivos',
+        'Estudando front-end, UX e performance'
     ];
 
     let currentTextIndex = 0;
@@ -257,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const projectsGrid = document.querySelector('.projects-grid');
 
     if (filterBtns.length > 0 && projectCards.length > 0) {
         filterBtns.forEach((btn) => {
@@ -271,8 +272,71 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.opacity = shouldShow ? '1' : '0';
                     card.style.transform = shouldShow ? 'translateY(0)' : 'translateY(20px)';
                 });
+
+                if (projectsGrid) {
+                    projectsGrid.scrollTo({ left: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+                }
             });
         });
+    }
+
+    if (projectsGrid) {
+        let isDraggingProjects = false;
+        let projectDragStartX = 0;
+        let projectDragStartScroll = 0;
+        let projectDragMoved = false;
+
+        projectsGrid.addEventListener('pointerdown', (event) => {
+            if (event.pointerType === 'touch') {
+                return;
+            }
+
+            if (event.target.closest('a, button, input, textarea, select')) {
+                return;
+            }
+
+            isDraggingProjects = true;
+            projectDragMoved = false;
+            projectDragStartX = event.clientX;
+            projectDragStartScroll = projectsGrid.scrollLeft;
+            projectsGrid.classList.add('is-dragging');
+            projectsGrid.setPointerCapture(event.pointerId);
+        });
+
+        projectsGrid.addEventListener('pointermove', (event) => {
+            if (!isDraggingProjects) {
+                return;
+            }
+
+            const dragDistance = event.clientX - projectDragStartX;
+            if (Math.abs(dragDistance) > 5) {
+                projectDragMoved = true;
+            }
+
+            projectsGrid.scrollLeft = projectDragStartScroll - dragDistance;
+        });
+
+        const stopProjectsDrag = (event) => {
+            if (!isDraggingProjects) {
+                return;
+            }
+
+            isDraggingProjects = false;
+            projectsGrid.classList.remove('is-dragging');
+            if (projectsGrid.hasPointerCapture(event.pointerId)) {
+                projectsGrid.releasePointerCapture(event.pointerId);
+            }
+        };
+
+        projectsGrid.addEventListener('pointerup', stopProjectsDrag);
+        projectsGrid.addEventListener('pointercancel', stopProjectsDrag);
+        projectsGrid.addEventListener('click', (event) => {
+            if (projectDragMoved) {
+                event.preventDefault();
+                event.stopPropagation();
+                projectDragMoved = false;
+            }
+        }, true);
     }
 
     const projectsData = {
@@ -282,8 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
             challenges: 'O principal cuidado foi equilibrar impacto visual com leitura clara, mantendo um visual marcante sem comprometer organização e responsividade.',
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'UI Design'],
             gallery: ['Interface com identidade visual escura', 'Seções destacadas por contraste', 'Layout preparado para diferentes telas'],
-            liveLink: 'https://github.com/Programandoprojetos/-CyberSentinel',
-            repoLink: 'https://github.com/Programandoprojetos/-CyberSentinel'
+            liveLink: 'https://cyber-sentinel-ten.vercel.app/',
+            repoLink: '',
+            repositoryNote: 'Repositório disponível'
         },
         projeto2: {
             title: 'FilmesFlix',
@@ -291,17 +356,46 @@ document.addEventListener('DOMContentLoaded', () => {
             challenges: 'O foco foi criar uma página atrativa, com cara de produto real, organizando informações visuais sem poluir a experiência do usuário.',
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
             gallery: ['Hero com destaque visual', 'Cards de conteúdo bem organizados', 'Estrutura pensada para navegação fluida'],
-            liveLink: 'https://programandoprojetos.github.io/FilmesFlix/',
-            repoLink: 'https://github.com/Programandoprojetos/FilmesFlix'
+            liveLink: 'https://filmesflix-flame.vercel.app/',
+            repoLink: '',
+            repositoryNote: 'Repositório disponível'
         },
         projeto3: {
             title: 'Portfólio Programando Projetos',
-            description: 'Portfólio pessoal desenvolvido para apresentar projetos, stack, contatos e evolução como desenvolvedor front-end.',
-            challenges: 'O desafio foi construir uma página com personalidade, pronta para GitHub Pages, cuidando de acessibilidade, metadados e publicação.',
+            description: 'Portfólio pessoal de Luis Henrique, criado para apresentar projetos, stack, contatos e evolução como desenvolvedor front-end.',
+            challenges: 'O desafio foi construir uma página com personalidade, pronta para GitHub Pages e Vercel, cuidando de acessibilidade, metadados e publicação.',
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages'],
             gallery: ['Hero com animações sutis', 'Sessões organizadas para leitura rápida', 'Meta tags e assets prontos para compartilhamento'],
             liveLink: 'https://programandoprojetos.github.io/Portfolio/',
-            repoLink: 'https://github.com/programandoprojetos'
+            repoLink: 'https://github.com/programandoprojetos/Portfolio'
+        },
+        projeto4: {
+            title: 'Studio Derenice Freitas',
+            description: 'Sistema web desenvolvido para organizar agendamentos, clientes, serviços e controle financeiro de um studio de beleza.',
+            challenges: 'O principal desafio foi reunir várias áreas da rotina do negócio em uma interface simples: agenda, clientes, serviços, pacotes, caixa e relatórios. A solução foi separar o sistema por painéis e salvar os dados localmente em arquivos JSON.',
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'JSON'],
+            gallery: ['Agendamento de serviços', 'Cadastro de clientes', 'Controle financeiro', 'Dashboard administrativo', 'Relatórios por período'],
+            liveLink: '',
+            repoLink: ''
+        },
+        projeto5: {
+            title: 'Página ChatGPT Premium',
+            description: 'Landing page criada para divulgar uma oferta de acesso ao ChatGPT Premium, apresentando benefícios, usos práticos, preço, prova social, FAQ e pedido direto pelo WhatsApp.',
+            challenges: 'O principal desafio foi organizar uma página de vendas clara, com foco em conversão e leitura rápida. A solução foi criar uma estrutura com hero forte, oferta destacada, contador de tempo, blocos de benefícios, formulário simples e CTA direto para WhatsApp.',
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'Landing Page', 'WhatsApp'],
+            gallery: ['Oferta com contador regressivo', 'Formulário conectado ao WhatsApp', 'Seção de benefícios', 'Prova social', 'FAQ de dúvidas finais', 'Layout responsivo'],
+            liveLink: 'https://pagina-chatgpt-premium.vercel.app/',
+            repoLink: '',
+            repositoryNote: 'Repositório disponível'
+        },
+        projeto6: {
+            title: 'Loja Smart LV',
+            description: 'Projeto de e-commerce desenvolvido com React no front-end e Node.js + Express no back-end. A aplicação conta com autenticação via JWT, cadastro e login de usuários, separação de perfis admin e cliente, catálogo de produtos, filtros, página detalhada, carrinho, checkout, cálculo de frete simulado, criação de pedidos e painel administrativo.',
+            challenges: 'O principal desafio foi organizar uma aplicação maior, com fluxo de compra e área administrativa. A solução foi separar o projeto em front-end e back-end, estruturar rotas de API, criar contextos para autenticação, carrinho e notificações, além de usar uma store em memória com dados seedados para facilitar os testes locais.',
+            technologies: ['React', 'Vite', 'Node.js', 'Express', 'JWT', 'Zod', 'Recharts'],
+            gallery: ['Autenticação com JWT', 'Perfis admin e cliente', 'Catálogo com categorias e filtros', 'Carrinho e checkout', 'Cálculo de frete simulado', 'Dashboard administrativo', 'Controle financeiro e logs'],
+            liveLink: '',
+            repoLink: ''
         }
     };
 
@@ -340,12 +434,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
 
                     <div class="project-modal-links">
-                        <a href="${project.liveLink}" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> Abrir Projeto
-                        </a>
-                        <a href="${project.repoLink}" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i> Ver Código
-                        </a>
+                        ${project.liveLink ? `
+                            <a href="${project.liveLink}" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Abrir Projeto
+                            </a>
+                        ` : ''}
+                        ${project.repoLink ? `
+                            <a href="${project.repoLink}" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
+                        ` : ''}
+                        ${project.repositoryNote ? `
+                            <span class="project-repo-note">
+                                <i class="fab fa-github"></i> ${project.repositoryNote}
+                            </span>
+                        ` : ''}
                     </div>
                 </div>
             `;
@@ -467,7 +570,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function(event) {
             const href = this.getAttribute('href');
-            const target = href ? document.querySelector(href) : null;
+            if (!href || href === '#') {
+                return;
+            }
+
+            const target = document.querySelector(href);
             if (!target) {
                 return;
             }
