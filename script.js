@@ -396,6 +396,24 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery: ['Autenticação com JWT', 'Perfis admin e cliente', 'Catálogo com categorias e filtros', 'Carrinho e checkout', 'Cálculo de frete simulado', 'Dashboard administrativo', 'Controle financeiro e logs'],
             liveLink: '',
             repoLink: ''
+        },
+        projeto7: {
+            title: 'Pro Elite Montagens',
+            description: 'Site profissional desenvolvido para apresentar os servicos da Pro Elite Montagens, com paginas institucionais, galeria, contato e solicitacao de orcamento integrada ao WhatsApp.',
+            challenges: 'O desafio foi criar uma presenca digital clara para a empresa, mostrando servicos, diferenciais, regioes de atendimento e um caminho rapido para o cliente pedir orcamento. A solucao foi estruturar o site com navegacao simples, chamadas diretas e formularios preparados para conversa pelo WhatsApp.',
+            technologies: ['Next.js', 'React', 'TypeScript', 'CSS', 'Lucide React', 'WhatsApp'],
+            gallery: ['Site institucional responsivo', 'Pagina de servicos', 'Galeria de trabalhos', 'Solicitacao de orcamento', 'Contato via WhatsApp', 'Identidade visual da Pro Elite'],
+            liveLink: 'https://pro-elite-montagens.vercel.app/',
+            repoLink: ''
+        },
+        projeto8: {
+            title: 'Pro Elite Admin',
+            description: 'Painel administrativo completo para gerenciar a operacao da Pro Elite Montagens, reunindo orcamentos, agenda, servicos, Pix, financeiro, relatorios, recibos e backup dos dados.',
+            challenges: 'O principal desafio foi transformar a rotina da empresa em um sistema centralizado: criar orcamentos, aprovar atendimentos, organizar a agenda, acompanhar pagamentos e gerar relatorios. A solucao foi dividir o painel em modulos administrativos conectados por API e banco local SQLite com Prisma.',
+            technologies: ['Next.js', 'React', 'TypeScript', 'Prisma', 'SQLite', 'JWT', 'Zod', 'QRCode'],
+            gallery: ['Dashboard administrativo', 'Login protegido', 'Orcamento automatico', 'Imagem de orcamento', 'Pix com QR Code', 'Agenda de atendimentos', 'Controle financeiro', 'Recibos', 'Relatorios CSV', 'Backup dos dados'],
+            liveLink: '',
+            repoLink: ''
         }
     };
 
